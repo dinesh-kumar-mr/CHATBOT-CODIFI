@@ -37,7 +37,7 @@ def main():
     os.environ["OPENAI_API_KEY"] = "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"
 
     # Dropdown to select a folder from a directory
-    root_directory = 'CHATBOT-CODIFI/'
+    root_directory = '/Dataset'
     folders = [folder for folder in os.listdir(root_directory) if os.path.isdir(os.path.join(root_directory, folder))]
     selected_folder = st.selectbox("Select a folder from the list:", folders)
     folder_path = os.path.join(root_directory, selected_folder)
