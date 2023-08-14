@@ -30,8 +30,12 @@ load_dotenv()
 def main():
     st.header("Chat with PDF 💬")
 
-    chunk_size = st.number_input('Set Chunk Size:', min_value=1, value=1000)
-    chunk_overlap = st.number_input('Set Chunk Overlap:', min_value=0, value=200)
+    # Set default values for chunk_size and chunk_overlap.
+    chunk_size = 1000
+    chunk_overlap = 200
+
+    # chunk_size = st.number_input('Set Chunk Size:', min_value=1, value=1000)
+    # chunk_overlap = st.number_input('Set Chunk Overlap:', min_value=0, value=200)
 
     # Set the OpenAI API key as an environment variable
     os.environ["OPENAI_API_KEY"] = "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"
